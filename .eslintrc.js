@@ -13,5 +13,9 @@ module.exports = {
   },
   parserOptions: {
     parser: 'babel-eslint'
+  },
+  "globals": {
+    "API_URL": true,
+    "DEGUG_MODE": true
   }
 }

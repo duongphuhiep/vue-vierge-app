@@ -19,11 +19,12 @@ export default {
   },
   mounted() {
     axios
-      .get("/api/greet")
+      .get(API_URL + "/api/greet")
       .then(resp => {
         this.remoteGreetMessage = resp.data.greetMessage;
       })
       .catch(err => {
+        console.error(API_URL + "/api/greet");
         this.remoteGreetMessage =
           err.response.status + " - " + err.response.statusText;
       });
